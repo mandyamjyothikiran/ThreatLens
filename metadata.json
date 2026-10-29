@@ -1,0 +1,6 @@
+{
+  "name": "ThreatLens",
+  "description": "Machine Learning-Based Zero-Day Attack Detection Framework analyzing network flow records to detect anomalous traffic and previously unseen cyber threats.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

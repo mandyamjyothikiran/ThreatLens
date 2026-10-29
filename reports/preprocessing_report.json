@@ -1,0 +1,22 @@
+{
+  "dataset": "CIC-IDS2017",
+  "handled_infinite_features": [
+    "Flow Bytes/s",
+    "Flow Packets/s"
+  ],
+  "imputation_strategy": "Median imputation based on training split",
+  "scaling_strategy": "RobustScaler (Median centering and IQR scaling)",
+  "leakage_features_dropped": [
+    "Flow ID",
+    "Source IP",
+    "Destination IP",
+    "Timestamp",
+    "SimillarHTTP"
+  ],
+  "split_ratio": {
+    "train": 0.6,
+    "validation": 0.2,
+    "test": 0.2
+  },
+  "zero_day_protocol": "Held-out attack categories (PortScan, Infiltration, Botnet) quarantined from training phase."
+}

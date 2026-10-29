@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-10-29T04:40:04.229447+00:00Z",
+  "dataset_name": "CIC-IDS2017 Benchmark Evaluation",
+  "test_sample_size": 4,
+  "positive_class": "Anomaly / Attack (Label != BENIGN)",
+  "decision_threshold": 0.4401,
+  "threshold_calibration_method": "95th Percentile of Benign Validation Set",
+  "models": {
+    "isolation_forest": {
+      "accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "false_positive_rate": 0.5,
+      "true_positive_rate": 0.0,
+      "specificity": 0.5,
+      "roc_auc": 1.0,
+      "pr_auc": 0.5,
+      "confusion_matrix": {
+        "true_positive": 0,
+        "true_negative": 2,
+        "false_positive": 2,
+        "false_negative": 0
+      },
+      "model_name": "Isolation Forest (scikit-learn Anomaly Detection)",
+      "approach": "Fitted solely on benign baseline to detect behavioral divergence",
+      "inference_latency_ms": 0.593
+    },
+    "random_forest": {
+      "accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "false_positive_rate": 0.5,
+      "true_positive_rate": 0.0,
+      "specificity": 0.5,
+      "roc_auc": 1.0,
+      "pr_auc": 0.5,
+      "confusion_matrix": {
+        "true_positive": 0,
+        "true_negative": 2,
+        "false_positive": 2,
+        "false_negative": 0
+      },
+      "model_name": "Random Forest (Supervised Classification Baseline)",
+      "approach": "Supervised baseline trained with known attack labels in training split",
+      "inference_latency_ms": 0.291
+    }
+  },
+  "roc_curve": [
+    {
+      "fpr": 0.0,
+      "tpr_iso": 0.0,
+      "tpr_rf": 0.0
+    },
+    {
+      "fpr": 0.5,
+      "tpr_iso": 0.0,
+      "tpr_rf": 0.0
+    },
+    {
+      "fpr": 1.0,
+      "tpr_iso": 1.0,
+      "tpr_rf": 1.0
+    }
+  ],
+  "precision_recall_curve": [
+    {
+      "recall": 0.0,
+      "precision_iso": 1.0,
+      "precision_rf": 1.0
+    },
+    {
+      "recall": 0.0,
+      "precision_iso": 0.0,
+      "precision_rf": 0.0
+    },
+    {
+      "recall": 1.0,
+      "precision_iso": 0.0,
+      "precision_rf": 0.0
+    }
+  ]
+}

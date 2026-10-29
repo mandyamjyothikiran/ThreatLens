@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-29T04:40:04.240507+00:00Z",
+  "comparison": [
+    {
+      "strategy": "Fixed Threshold",
+      "threshold": 0.5,
+      "validation_fpr": 0.0,
+      "validation_recall": 0.0,
+      "validation_precision": 0.0,
+      "validation_f1": 0.0
+    },
+    {
+      "strategy": "Adaptive (90.0th %ile of Normal)",
+      "threshold": 0.4397,
+      "validation_fpr": 0.5,
+      "validation_recall": 0.5,
+      "validation_precision": 0.5,
+      "validation_f1": 0.5
+    },
+    {
+      "strategy": "Adaptive (95.0th %ile of Normal)",
+      "threshold": 0.4401,
+      "validation_fpr": 0.5,
+      "validation_recall": 0.5,
+      "validation_precision": 0.5,
+      "validation_f1": 0.5
+    },
+    {
+      "strategy": "Adaptive (98.0th %ile of Normal)",
+      "threshold": 0.4404,
+      "validation_fpr": 0.5,
+      "validation_recall": 0.5,
+      "validation_precision": 0.5,
+      "validation_f1": 0.5
+    }
+  ]
+}

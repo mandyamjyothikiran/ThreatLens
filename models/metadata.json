@@ -1,0 +1,108 @@
+{
+  "framework": "ThreatLens Zero-Day Detection Engine",
+  "version": "1.0.0",
+  "trained_at": "2026-10-29T04:40:05.890900+00:00Z",
+  "training_duration_seconds": 0.089,
+  "dataset": {
+    "source": "CIC-IDS2017",
+    "total_samples": 20,
+    "train_samples": 12,
+    "val_samples": 4,
+    "test_samples": 4,
+    "benign_train_samples": 4
+  },
+  "isolation_forest": {
+    "estimator": "sklearn.ensemble.IsolationForest",
+    "artifact_path": "models/isolation_forest.joblib",
+    "n_estimators": 100,
+    "max_samples": 4,
+    "contamination": 0.05,
+    "calibrated_threshold": 0.4401,
+    "score_formulation": "score = -score_samples(X). Range ~ [0.35, 0.90]. Higher = more anomalous. Flagged when score >= calibrated_threshold.",
+    "decision_rule": "is_anomaly = (anomaly_score >= 0.4401)"
+  },
+  "random_forest": {
+    "estimator": "sklearn.ensemble.RandomForestClassifier",
+    "artifact_path": "models/random_forest.joblib",
+    "n_estimators": 50
+  },
+  "features": {
+    "count": 22,
+    "names": [
+      "Destination Port",
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Bwd Packet Length Mean",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Fwd IAT Mean",
+      "Bwd IAT Mean",
+      "SYN Flag Count",
+      "ACK Flag Count",
+      "Average Packet Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward"
+    ],
+    "top_features": [
+      {
+        "feature": "Destination Port",
+        "weight": 1.0,
+        "median": 80.0
+      },
+      {
+        "feature": "Bwd IAT Mean",
+        "weight": 0.2668,
+        "median": 26989.4
+      },
+      {
+        "feature": "Total Length of Bwd Packets",
+        "weight": 0.2295,
+        "median": 1120.0
+      },
+      {
+        "feature": "Fwd Packet Length Max",
+        "weight": 0.1934,
+        "median": 120.0
+      },
+      {
+        "feature": "Flow Bytes/s",
+        "weight": 0.1783,
+        "median": 4615.38
+      },
+      {
+        "feature": "Average Packet Size",
+        "weight": 0.1679,
+        "median": 105.79
+      },
+      {
+        "feature": "Bwd Packet Length Mean",
+        "weight": 0.1546,
+        "median": 132.0
+      },
+      {
+        "feature": "Init_Win_bytes_forward",
+        "weight": 0.1503,
+        "median": 29200.0
+      },
+      {
+        "feature": "Fwd Packet Length Mean",
+        "weight": 0.1478,
+        "median": 56.25
+      },
+      {
+        "feature": "Total Backward Packets",
+        "weight": 0.1462,
+        "median": 4.0
+      }
+    ]
+  }
+}

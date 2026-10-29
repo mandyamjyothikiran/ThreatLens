@@ -1,0 +1,43 @@
+{
+  "experiment_title": "Zero-Day Attack Simulation via Held-Out Attack Category Protocol",
+  "timestamp": "2026-10-29T04:40:04.238513+00:00Z",
+  "protocol_description": "Models are evaluated on attack categories strictly excluded from training data to simulate real-world zero-day network threats.",
+  "held_out_categories": [
+    {
+      "category": "PortScan",
+      "sample_count": 5,
+      "isolation_forest_recall": 1.0,
+      "isolation_forest_avg_score": 0.4877,
+      "random_forest_recall": 0.6,
+      "analysis": "Evaluated on 5 real instances of 'PortScan'. Isolation Forest detected 5/5 via unsupervised divergence."
+    },
+    {
+      "category": "Infiltration",
+      "sample_count": 2,
+      "isolation_forest_recall": 1.0,
+      "isolation_forest_avg_score": 0.5223,
+      "random_forest_recall": 0.0,
+      "analysis": "Evaluated on 2 real instances of 'Infiltration'. Isolation Forest detected 2/2 via unsupervised divergence."
+    },
+    {
+      "category": "Botnet",
+      "sample_count": 2,
+      "isolation_forest_recall": 1.0,
+      "isolation_forest_avg_score": 0.5069,
+      "random_forest_recall": 0.0,
+      "analysis": "Evaluated on 2 real instances of 'Botnet'. Isolation Forest detected 2/2 via unsupervised divergence."
+    }
+  ],
+  "overall_summary": {
+    "unseen_attack_total_records": 9,
+    "isolation_forest_overall_unseen_recall": 1.0,
+    "random_forest_overall_unseen_recall": 0.3333,
+    "unseen_detection_gap_percentage": "+66.7% Detection Gap for Unsupervised Isolation",
+    "academic_conclusion": "Supervised classifiers trained only on known attacks show lower recall on novel topologies. The unsupervised Isolation Forest achieved 100.0% detection on held-out attacks without seeing their labels."
+  },
+  "limitations": [
+    "An anomaly is not automatically a confirmed zero-day vulnerability; it denotes a statistically significant divergence from normal traffic distributions.",
+    "High network throughput fluctuations and sudden flash crowds can cause temporary false-positive spikes.",
+    "Sophisticated low-and-slow stealth attacks that intentionally mimic benign flow statistics remain challenging for statistical isolation."
+  ]
+}

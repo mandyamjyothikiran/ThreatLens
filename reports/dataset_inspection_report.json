@@ -1,0 +1,40 @@
+{
+  "dataset_path": "/app/applet/ml/../data/cicids2017_sample.csv",
+  "total_records": 20,
+  "total_features": 23,
+  "columns": [
+    "Destination Port",
+    "Flow Duration",
+    "Total Fwd Packets",
+    "Total Backward Packets",
+    "Total Length of Fwd Packets",
+    "Total Length of Bwd Packets",
+    "Fwd Packet Length Max",
+    "Fwd Packet Length Min",
+    "Fwd Packet Length Mean",
+    "Bwd Packet Length Mean",
+    "Flow Bytes/s",
+    "Flow Packets/s",
+    "Flow IAT Mean",
+    "Flow IAT Std",
+    "Flow IAT Max",
+    "Fwd IAT Mean",
+    "Bwd IAT Mean",
+    "SYN Flag Count",
+    "ACK Flag Count",
+    "Average Packet Size",
+    "Init_Win_bytes_forward",
+    "Init_Win_bytes_backward",
+    "Label"
+  ],
+  "label_column": "Label",
+  "class_distribution": {
+    "BENIGN": 10,
+    "DoS Hulk": 4,
+    "FTP-Patator": 3,
+    "SSH-Patator": 3
+  },
+  "missing_values": {},
+  "infinite_values": {},
+  "hygiene_status": "VALID"
+}
